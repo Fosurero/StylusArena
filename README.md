@@ -2,10 +2,6 @@
 
 > **The 30-second on-ramp for external devs to try Arbitrum Stylus**
 
-**No install. No setup. Deploy Rust contracts + see 60% gas savings vs Solidity in seconds.**
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FFosurero%2FStylusArena)
-
 ---
 
 ## 🎯 What is StylusArena?
@@ -209,9 +205,9 @@ StylusArena is funded through the Arbitrum grants program ($11,000 total).
 
 | Milestone | Budget | Status | Due |
 |---|---|---|---|
-| **1 — Core MVP & Gas Dashboard** | $3,700 | ✅ Completed | Jan 2026 |
-| **2 — WASM Compile & On-Chain Deploy** | $3,700 | 🔄 In Progress | Mar 2026 |
-| **3 — Community & Ecosystem Polish** | $3,600 | ⬜ Not Started | 25 Apr 2026 |
+| **1 — Core MVP & Gas Dashboard** | $6,500 | ✅ Completed | Jan 2026 |
+| **2 — WASM Compile & On-Chain Deploy** | $6,500 | 🔄 In Progress | Mar 2026 |
+| **3 — Community & Ecosystem Polish** | $6,000 | ⬜ Not Started | 25 Apr 2026 |
 
 > Track progress on [GitHub Issues & Milestones](https://github.com/Fosurero/StylusArena/milestones)
 
