@@ -94,7 +94,6 @@ No paid marketing. Pure organic curiosity.
 │   ├── app/              # Next.js App Router pages
 │   ├── components/       # React components (editor, gas dashboard, deploy panel)
 │   └── lib/              # Templates, wagmi config, utilities
-├── docs/                 # Internal setup and contribution docs
 └── .github/assets/       # README screenshots
 ```
 
