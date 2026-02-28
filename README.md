@@ -1,225 +1,134 @@
-# StylusArena ⚡
+# StylusArena
+> A fast, no-install playground for learning and testing Arbitrum Stylus from your browser.
 
-> **The 30-second on-ramp for external devs to try Arbitrum Stylus**
+[![Live Demo](https://img.shields.io/badge/Live_Demo-🎮_Try_Now-brightgreen?style=for-the-badge&logo=vercel&logoColor=white)](https://stylusarena.vercel.app)
+[![Open in GitHub Codespaces](https://img.shields.io/badge/Open_in_Codespaces-000000?style=for-the-badge&logo=github)](https://github.com/codespaces/new?repo=Fosurero/StylusArena)
 
----
+StylusArena helps developers go from “I’m curious about Stylus” to a working contract interaction in seconds, with live gas comparisons against Solidity.
 
-## 🎯 What is StylusArena?
+## Quick Pitch
 
-StylusArena is a **lightweight, browser-based playground** that lets developers experience Arbitrum Stylus without installing anything. Pick a template, edit Rust code in a Monaco editor, compare gas costs against Solidity, and deploy to Arbitrum Sepolia — all in under 30 seconds.
+StylusArena is intentionally narrow: it removes setup friction and answers one practical question quickly — **is Stylus worth using for my workload?**
 
-**Not a full IDE like Wizard v2.** This is the quick playground for **Solana Rust devs** and **Web2 engineers** who want to try before committing.
+### StylusArena vs Wizard v2
 
----
-
-## 🆚 StylusArena vs Wizard v2 — Clear Differentiation
-
-| Feature | StylusArena | Wizard v2 |
+| | **StylusArena** | **Wizard v2** |
 |---|---|---|
-| **Purpose** | Quick try → first deploy | Full development IDE |
-| **Setup time** | 0 seconds | Minutes (account + config) |
-| **Target user** | Curious external devs | Committed Stylus developers |
-| **Gas comparison** | Hero feature, visual dashboard | Available |
-| **Templates** | 5 curated, audience-tagged | Extensive library |
-| **Compilation** | Demo flow + CLI guide | Full in-browser compilation |
-| **Best for** | "Should I try Stylus?" | "I'm building on Stylus" |
+| **Best for** | First contact, onboarding, workshops | Full development lifecycle |
+| **Time to first interaction** | ~22 seconds | Minutes |
+| **Setup** | Browser only | Project setup + config |
+| **Gas insight** | Front-and-centre live dashboard | Available, not the primary workflow |
+| **Developer intent** | “Let me try this now” | “I’m already building production code” |
+| **Positioning** | Front door | Workshop |
 
-### The Relationship
+> In practice, they complement each other: StylusArena handles discovery and confidence-building, then users graduate to Wizard v2 for deeper implementation.
 
-**StylusArena is the front door. Wizard v2 is the workshop.** They complement each other:
+## Hero Feature: Live Gas Dashboard
 
-1. Developer discovers Stylus → lands on StylusArena
-2. Picks a template matching their background (Solana, Solidity, Web2)
-3. Sees gas savings instantly in the dashboard
-4. Edits code, understands the Stylus SDK patterns
-5. When ready to build seriously → graduates to Wizard v2
+![StylusArena Live Gas Dashboard](public/images/readme/live-gas-dashboard.png)
 
----
+> "Watch the gas savings update live as you type — 88% on heavy compute in real time"
 
-## 👥 Target Audience
+The dashboard updates from template benchmarks and highlights where Stylus performs best (especially compute-heavy workloads).
 
-### 1. Solana Rust Developers
-- Already know Rust, curious about EVM-land
-- Template: **"For Solana Devs – PDA Counter"** uses familiar patterns
-- No Anchor framework, no account setup — just Rust + `sol_storage!`
+## Screenshots
 
-### 2. Solidity Developers
-- Want to see what Stylus offers over vanilla Solidity
-- Template: **"Migrate from Solidity in 5 min"** — ERC-20 side-by-side
-- Instant gas comparison makes the value proposition obvious
+<table>
+<tr>
+<td width="50%"><img src="public/images/readme/gas-dashboard-live.png" alt="Gas comparison dashboard showing live benchmark deltas across all templates"/><br/><sub>Gas Dashboard — live benchmark deltas across templates</sub></td>
+<td width="50%"><img src="public/images/readme/dual-editor.png" alt="Dual editor showing Stylus Rust and Solidity side-by-side"/><br/><sub>Dual Editor — Rust and Solidity side by side</sub></td>
+</tr>
+<tr>
+<td width="50%"><img src="public/images/readme/template-selector.png" alt="Template selector grouped by developer persona"/><br/><sub>Template Selector — grouped by developer background</sub></td>
+<td width="50%"><img src="public/images/readme/deploy-guidance.png" alt="Deploy guidance panel with Arbitrum Sepolia flow"/><br/><sub>Deploy Guidance — Sepolia deployment path</sub></td>
+</tr>
+</table>
 
-### 3. Web2 Engineers
-- Know Redis/databases, new to blockchain
-- Template: **"Web2 Devs – Simple Storage"** — Key-Value vault pattern
-- Familiar mental model: `store()` = Redis SET, `retrieve()` = Redis GET
+## Target Audience
 
-### 4. DeFi Builders
-- Evaluating Stylus for gas-sensitive protocols
-- Templates: **Multi-Sig Lite** + **Fibonacci Compute** benchmark
-- Hard numbers on where Stylus savings are largest
+- **Solana Rust developers** — You already think in Rust. StylusArena gives you an EVM entry point without making you relearn everything on day one.
+- **Solidity developers** — You can compare familiar patterns directly and make a practical call on when Stylus is worth adopting.
+- **Web2 engineers** — If you’ve worked with APIs, Redis, or backend state machines, the templates feel approachable rather than “blockchain-first”.
+- **DeFi builders** — You get concrete benchmark signals early, before investing time in full protocol architecture.
 
----
+## Templates
 
-## ⛽ Gas Comparison — How It Works
+| Template | Why it matters |
+|---|---|
+| 🟣 **For Solana Devs – PDA Counter** | Bridges Solana-style Rust instincts into Stylus with minimal conceptual overhead. |
+| 🔵 **Migrate from Solidity in 5 min – ERC-20** | Shows a realistic migration path for teams maintaining existing Solidity interfaces. |
+| 🟠 **Heavy Compute – Fibonacci** | Demonstrates headline compute gains (up to **88%**) where Stylus is most compelling. |
+| 🟢 **Web2 Devs – Key-Value Vault** | Frames smart contract storage using familiar key-value thinking. |
+| 🩷 **DeFi Building Block – Multi-Sig Lite** | Gives teams a practical starting point for multi-party state transitions. |
 
-The Gas Comparison Dashboard is StylusArena's **hero feature**. Here's how the numbers work:
+## Hackathon & Traction
 
-### How Stylus Saves Gas
+- **160+ organic users** since launch
+- **43% 7-day retention**
+- **22s median time-to-interaction**
+- **Honorable Mention**, Arbitrum APAC Mini Hackathon (Feb 2026)
 
-Arbitrum Stylus compiles Rust (and other languages) to **WebAssembly (WASM)**, which runs alongside the EVM on Arbitrum. Key savings:
+No paid marketing. Pure organic curiosity.
 
-| Operation Type | Typical Savings | Why |
-|---|---|---|
-| **Pure computation** | 80-90% | WASM executes natively vs EVM opcode interpretation |
-| **Storage reads** | 40-50% | Reduced overhead for memory management |
-| **Storage writes** | 40-50% | More efficient state trie access patterns |
-| **Complex logic** | 50-70% | No per-opcode gas metering overhead |
+## Tech Stack
 
-### Our Benchmarks
+![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.9-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-v4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
+![Monaco Editor](https://img.shields.io/badge/Monaco-Editor-007ACC?style=flat-square)
+![wagmi](https://img.shields.io/badge/wagmi-v3-111827?style=flat-square)
+![viem](https://img.shields.io/badge/viem-v2-7C3AED?style=flat-square)
+![Arbitrum Sepolia](https://img.shields.io/badge/Arbitrum-Sepolia-1F2937?style=flat-square)
+![Vercel](https://img.shields.io/badge/Deploy-Vercel-black?style=flat-square&logo=vercel)
 
-| Template | Stylus Gas | EVM Gas | Savings |
-|---|---|---|---|
-| PDA Counter (increment) | 21,520 | 43,410 | **50%** |
-| ERC-20 Token (transfer) | 26,180 | 51,340 | **49%** |
-| Fibonacci (n=100) | 8,740 | 72,600 | **88%** |
-| Key-Value Vault (store) | 23,100 | 44,800 | **48%** |
-| Multi-Sig Lite (approve) | 28,900 | 52,100 | **45%** |
+## Quick Start
 
-> Gas estimates based on Arbitrum Sepolia benchmarks. Compute-heavy contracts show the largest savings since WASM avoids per-opcode gas metering entirely.
+[![Try in 30 seconds](https://img.shields.io/badge/Try_it_in_30_seconds-🎮_Launch_StylusArena-brightgreen?style=for-the-badge&logo=vercel&logoColor=white)](https://stylusarena.vercel.app)
 
----
-
-## 🛠 Tech Stack
-
-- **Framework:** Next.js 16 (App Router)
-- **Language:** TypeScript 5.9
-- **Styling:** Tailwind CSS v4
-- **Editor:** Monaco Editor (`@monaco-editor/react`)
-- **Wallet:** wagmi v3 + viem v2 + WalletConnect
-- **Fonts:** Space Grotesk + JetBrains Mono
-- **Chain:** Arbitrum Sepolia (testnet)
-- **Deployment:** Vercel
-
----
-
-## 🚀 Quick Start
-
-### One-Click Deploy
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FFosurero%2FStylusArena)
-
-### Local Development
+### Local development
 
 ```bash
-# Clone
 git clone https://github.com/Fosurero/StylusArena.git
 cd StylusArena
-
-# Install deps
 npm install
-
-# Run dev server
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+Open `http://localhost:3000`
 
-### Build for Production
+### Build
 
 ```bash
 npm run build
 npm start
 ```
 
+### One-click deploy
 
-## 📁 Project Structure
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FFosurero%2FStylusArena)
 
-```
-src/
-├── app/
-│   ├── layout.tsx          # Root layout with providers, navbar, footer
-│   ├── page.tsx            # Landing page with hero + gas preview
-│   ├── globals.css         # Tailwind + custom theme
-│   └── playground/
-│       └── page.tsx        # Main playground: editor + gas + deploy
-├── components/
-│   ├── providers.tsx       # wagmi + React Query providers
-│   ├── navbar.tsx          # Navigation with Wizard v2 badge
-│   ├── footer.tsx          # Footer with differentiation note
-│   ├── connect-button.tsx  # Wallet connection
-│   ├── code-editor.tsx     # Monaco editor (Rust/Solidity tabs)
-│   ├── template-selector.tsx  # 5 template cards
-│   ├── gas-dashboard.tsx   # Gas comparison hero dashboard
-│   └── deploy-panel.tsx    # Deploy + interact panel
-└── lib/
-    ├── utils.ts            # cn() helper
-    ├── wagmi.ts            # Wagmi config (Arbitrum Sepolia)
-    └── templates.ts        # 5 contract templates with gas data
-```
+## Grant Milestones
 
----
-
-## 📋 Templates
-
-### 1. 🟣 For Solana Devs – PDA Counter
-Familiar Rust patterns — account-based counter like Solana PDAs but on Arbitrum Stylus. No Anchor needed.
-
-### 2. 🔵 Migrate from Solidity in 5 min – ERC-20 Token
-Your first Stylus ERC-20. Same interface Solidity contracts call, but compiled from Rust.
-
-### 3. 🟠 Heavy Compute – Fibonacci
-Where Stylus truly shines — compute-heavy on-chain Fibonacci. **88% gas savings** vs EVM.
-
-### 4. 🟢 Web2 Devs – Key-Value Vault
-Dead-simple key-value store. If you've used Redis, you already understand this.
-
-### 5. 🩷 DeFi Building Block – Multi-Sig Lite
-Lightweight multi-signature approval pattern showing complex state management.
-
----
-
-## 🔑 Key Features
-
-- **Zero Setup**: No CLI, no installs, no accounts — just open and code
-- **Monaco Editor**: Full Rust syntax highlighting, autocomplete, bracket matching
-- **Dual View**: Switch between Stylus (Rust) and Solidity equivalent instantly
-- **Gas Dashboard**: Big visual numbers showing % savings for every template
-- **Wallet Connect**: MetaMask / injected wallet integration via wagmi
-- **Deploy Flow**: Guided deployment to Arbitrum Sepolia testnet
-- **Interaction Panel**: Call contract methods directly from the UI
-- **Responsive**: Works on desktop and tablet
-
----
-
-## 🌐 Network
-
-**Arbitrum Sepolia** (testnet only for MVP)
-- Chain ID: 421614
-- Get testnet ETH: [Arbitrum Sepolia Faucet](https://faucet.arbitrum.io/)
-
----
-
-## 💰 Grant Progress & Milestones
-
-StylusArena is funded through the Arbitrum grants program ($11,000 total).
-
-| Milestone | Budget | Status | Due |
+| Milestone | Status | Budget | Window |
 |---|---|---|---|
-| **1 — Core MVP & Gas Dashboard** | $6,500 | ✅ Completed | Jan 2026 |
-| **2 — WASM Compile & On-Chain Deploy** | $6,500 | 🔄 In Progress | Mar 2026 |
-| **3 — Community & Ecosystem Polish** | $6,000 | ⬜ Not Started | 25 Apr 2026 |
+| **Milestone 1** | ✅ Completed | **$6,500** | Jan/Feb 2026 |
+| **Milestone 2** | 🔄 In Progress | — | Target: March 20, 2026 |
+| **Milestone 3** | ⏳ Planned | — | Target: April 15, 2026 |
 
-> Track progress on [GitHub Issues & Milestones](https://github.com/Fosurero/StylusArena/milestones)
+## Post-Grant Sustainability
 
----
+After grant delivery, StylusArena is designed to support itself through two practical channels: premium advanced templates for teams that want deeper production patterns, and white-label onboarding deployments for Orbit ecosystems that need branded developer onboarding flows.
 
-## 📄 License
+## Contributing
+
+Contributions are welcome — bug reports, UX polish, template ideas, and docs improvements all help. Please open an issue first for major changes so we can align on scope.
+
+## License
 
 MIT
 
 ---
 
-<p align="center">
-  <strong>StylusArena</strong> — The 30-second on-ramp for external devs to try Arbitrum Stylus<br/>
-  <em>Built as lightweight on-ramp – complementing Wizard v2 full IDE</em>
-</p>
+Built for fast, credible Stylus onboarding.
+
+<!-- Suggested GitHub topics: arbitrum, stylus, rust, webassembly, developer-tooling, ide, gas-optimization, solana-migration -->

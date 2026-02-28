@@ -5,7 +5,6 @@ import { useAccount, useWalletClient, usePublicClient } from "wagmi";
 import { encodeFunctionData, decodeFunctionResult, type Hex } from "viem";
 import { arbitrumSepolia } from "wagmi/chains";
 
-// ABI for interacting with deployed Stylus contracts
 const COUNTER_ABI = [
   {
     name: "increment",
@@ -72,14 +71,9 @@ export function DeployPanel({ contractCode, templateId }: DeployPanelProps) {
 
     setIsDeploying(true);
     setStatusType("info");
-    setStatus("Preparing Stylus deployment flow...");
+    setStatus("Preparing deployment guidance...");
 
     try {
-      // Simulate realistic processing
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-      setStatus("Analyzing contract structure...");
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-
       setStatusType("success");
       setStatus(
         "Stylus contracts require cargo-stylus CLI for compilation.\n\n" +
@@ -186,7 +180,6 @@ export function DeployPanel({ contractCode, templateId }: DeployPanelProps) {
 
   return (
     <div className="space-y-4">
-      {/* Deploy Section */}
       <div className="glass rounded-xl p-5">
         <h3 className="text-sm font-bold mb-3 flex items-center gap-2">
           <span className="relative flex h-2 w-2">
@@ -257,7 +250,6 @@ export function DeployPanel({ contractCode, templateId }: DeployPanelProps) {
         )}
       </div>
 
-      {/* Interaction Section */}
       <div className="glass rounded-xl p-5">
         <h3 className="text-sm font-bold mb-3 flex items-center gap-2">
           <svg className="w-4 h-4 text-[hsl(var(--primary))]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -340,7 +332,6 @@ export function DeployPanel({ contractCode, templateId }: DeployPanelProps) {
         </div>
       </div>
 
-      {/* Faucet link */}
       <div className="glass rounded-xl p-4 text-center">
         <p className="text-xs text-[hsl(var(--muted-foreground))] mb-2">Need testnet ETH?</p>
         <a

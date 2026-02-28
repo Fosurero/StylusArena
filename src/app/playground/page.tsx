@@ -34,7 +34,6 @@ function PlaygroundContent() {
 
   return (
     <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      {/* Top bar */}
       <div className="flex items-center justify-between mb-8">
         <div>
           <h1 className="text-3xl font-black tracking-tight">
@@ -50,9 +49,7 @@ function PlaygroundContent() {
         </span>
       </div>
 
-      {/* Main Layout: 3 columns */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-        {/* Left sidebar — Templates */}
         <div className="lg:col-span-2">
           <TemplateSelector
             selectedId={selected.id}
@@ -60,7 +57,6 @@ function PlaygroundContent() {
           />
         </div>
 
-        {/* Center — Editor */}
         <div className="lg:col-span-7">
           <DualEditor
             stylusCode={code}
@@ -69,13 +65,11 @@ function PlaygroundContent() {
           />
         </div>
 
-        {/* Right sidebar — Deploy + Interact */}
         <div className="lg:col-span-3">
           <DeployPanel contractCode={code} templateId={selected.id} />
         </div>
       </div>
 
-      {/* Gas Dashboard — Full Width Below */}
       <div className="mt-10">
         <div className="flex items-center gap-3 mb-6">
           <div className="h-px flex-1 bg-gradient-to-r from-transparent via-[hsl(var(--border))] to-transparent" />

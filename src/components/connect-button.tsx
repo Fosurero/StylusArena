@@ -4,7 +4,6 @@ import { useAccount, useConnect, useDisconnect, useSwitchChain } from "wagmi";
 import { arbitrumSepolia } from "wagmi/chains";
 import { useState, useEffect, useRef } from "react";
 
-/* Icon helpers */
 function connectorIcon(name: string) {
   const n = name.toLowerCase();
   if (n.includes("metamask")) return "🦊";
@@ -30,7 +29,6 @@ export function ConnectButton() {
 
   const wrongNetwork = isConnected && chain?.id !== arbitrumSepolia.id;
 
-  // Close dropdowns on outside click
   useEffect(() => {
     function handleClick(e: MouseEvent) {
       if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
@@ -44,11 +42,9 @@ export function ConnectButton() {
     return () => document.removeEventListener("mousedown", handleClick);
   }, []);
 
-  // Surface wagmi connect errors
   useEffect(() => {
     if (connectError) {
       const msg = connectError.message || "Connection failed";
-      // Extract human-readable portion
       if (msg.includes("User rejected")) {
         setError("Connection rejected by user");
       } else if (msg.includes("already pending")) {
@@ -61,7 +57,6 @@ export function ConnectButton() {
     }
   }, [connectError]);
 
-  // Reset copied state
   useEffect(() => {
     if (copied) {
       const t = setTimeout(() => setCopied(false), 2000);
@@ -69,7 +64,6 @@ export function ConnectButton() {
     }
   }, [copied]);
 
-  /* ---- CONNECTED STATE ---- */
   if (isConnected && address) {
     return (
       <div className="flex items-center gap-2">
@@ -161,7 +155,6 @@ export function ConnectButton() {
     );
   }
 
-  /* ---- DISCONNECTED STATE ---- */
   return (
     <div className="relative" ref={pickerRef}>
       <button
@@ -191,10 +184,8 @@ export function ConnectButton() {
         </span>
       </button>
 
-      {/* Wallet Picker Dropdown */}
       {showWalletPicker && (
         <div className="absolute right-0 top-full mt-2 w-72 rounded-xl glass border border-[hsl(var(--border))] shadow-2xl z-50 overflow-hidden">
-          {/* Header */}
           <div className="px-4 py-3 border-b border-[hsl(var(--border))] bg-[hsl(var(--muted))]/30">
             <p className="text-sm font-bold">Connect a Wallet</p>
             <p className="text-[11px] text-[hsl(var(--muted-foreground))] mt-0.5">
@@ -202,7 +193,6 @@ export function ConnectButton() {
             </p>
           </div>
 
-          {/* Connector list */}
           <div className="p-2 space-y-1">
             {connectors.map((connector) => (
               <button
@@ -253,14 +243,12 @@ export function ConnectButton() {
             )}
           </div>
 
-          {/* Error message */}
           {error && (
             <div className="px-4 py-2 border-t border-red-500/20 bg-red-500/10">
               <p className="text-[11px] text-red-400">{error}</p>
             </div>
           )}
 
-          {/* Footer hint */}
           <div className="px-4 py-2.5 border-t border-[hsl(var(--border))] bg-[hsl(var(--muted))]/20">
             <p className="text-[10px] text-[hsl(var(--muted-foreground))] text-center">
               New to Ethereum?{" "}
@@ -274,7 +262,7 @@ export function ConnectButton() {
               </a>
               {" · "}
               <a
-                href="https://faucet.quicknode.com/arbitrum/sepolia"
+                href="https://faucet.arbitrum.io/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-emerald-400 hover:underline font-medium"

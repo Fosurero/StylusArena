@@ -5,7 +5,6 @@ export function Footer() {
     <footer className="border-t border-[hsl(var(--border))] py-10 mt-auto">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Brand */}
           <div className="md:col-span-2">
             <div className="flex items-center gap-2 mb-3">
               <div className="w-7 h-7 rounded-lg gradient-primary flex items-center justify-center">
@@ -30,7 +29,6 @@ export function Footer() {
             </p>
           </div>
 
-          {/* Links */}
           <div>
             <h4 className="text-xs font-semibold uppercase tracking-wider text-[hsl(var(--muted-foreground))] mb-3">
               Product

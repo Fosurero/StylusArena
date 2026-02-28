@@ -49,7 +49,6 @@ export function GasDashboard({
 
   return (
     <div id="gas" className="space-y-6">
-      {/* Hero Numbers */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div className="glass glass-hover rounded-2xl p-8 text-center glow-green transition-all hover:scale-[1.02]">
           <p className="text-[10px] uppercase tracking-[0.2em] text-[hsl(var(--muted-foreground))] mb-3 font-bold">
@@ -86,7 +85,6 @@ export function GasDashboard({
         </div>
       </div>
 
-      {/* Side-by-side Table */}
       <div className="glass rounded-2xl p-6 border border-[hsl(var(--border))]">
         <h3 className="text-lg font-bold mb-5 flex items-center gap-2">
           <svg className="w-5 h-5 text-[hsl(var(--primary))]" fill="none" viewBox="0 0 24 24" stroke="currentColor">

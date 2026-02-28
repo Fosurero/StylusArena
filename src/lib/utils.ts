@@ -1,6 +1,7 @@
-import { clsx, type ClassValue } from "clsx";
-import { twMerge } from "tailwind-merge";
+export function formatGas(value: number): string {
+  return value.toLocaleString();
+}
 
-export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs));
+export function calcSavings(evm: number, stylus: number): number {
+  return Math.round(((evm - stylus) / evm) * 100);
 }

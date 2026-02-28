@@ -4,14 +4,11 @@ import { templates } from "@/lib/templates";
 export default function Home() {
   return (
     <div className="relative noise-bg">
-      {/* Hero Section */}
       <section className="relative overflow-hidden min-h-[90vh] flex items-center">
-        {/* Animated background orbs */}
         <div className="absolute top-20 left-1/4 w-96 h-96 rounded-full bg-[hsl(213,94%,55%)] opacity-[0.04] blur-[120px] animate-float" />
         <div className="absolute bottom-20 right-1/4 w-80 h-80 rounded-full bg-[hsl(280,70%,55%)] opacity-[0.05] blur-[100px] animate-float" style={{ animationDelay: "2s" }} />
         <div className="absolute top-1/2 left-1/2 w-64 h-64 rounded-full bg-[hsl(160,80%,42%)] opacity-[0.03] blur-[80px] animate-float" style={{ animationDelay: "4s" }} />
 
-        {/* Grid background */}
         <div
           className="absolute inset-0 opacity-[0.04]"
           style={{
@@ -24,7 +21,6 @@ export default function Home() {
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center max-w-5xl mx-auto">
-            {/* Status Badge */}
             <div className="inline-flex items-center gap-2.5 px-5 py-2 rounded-full glass text-sm mb-10 animate-float" style={{ animationDuration: "8s" }}>
               <span className="relative flex h-2.5 w-2.5">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
@@ -35,7 +31,6 @@ export default function Home() {
               </span>
             </div>
 
-            {/* Hero Headline */}
             <h1 className="text-5xl sm:text-6xl lg:text-8xl font-black tracking-tighter leading-[0.9] mb-8">
               No install. No setup.
               <br />
@@ -63,7 +58,6 @@ export default function Home() {
               committing.
             </p>
 
-            {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
               <Link
                 href="/playground"
@@ -90,7 +84,6 @@ export default function Home() {
               </a>
             </div>
 
-            {/* Social proof */}
             <p className="text-sm text-[hsl(var(--muted-foreground))]">
               Built as lightweight on-ramp — complementing{" "}
               <a
@@ -107,7 +100,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Gas Preview Section */}
       <section id="gas-preview" className="py-24 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -124,7 +116,6 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Gas comparison cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
             <div className="glass glass-hover rounded-2xl p-10 text-center transition-all hover:scale-[1.02] glow-green">
               <p className="text-7xl font-black text-emerald-400 mb-3 tracking-tighter">60<span className="text-4xl">%</span></p>
@@ -146,7 +137,6 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Template preview grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {templates.map((t) => {
               const savings = Math.round(
@@ -198,7 +188,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* How it Works */}
       <section className="py-24 border-t border-[hsl(var(--border))]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -245,7 +234,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Differentiation Section */}
       <section className="py-24 border-t border-[hsl(var(--border))]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -302,7 +290,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Milestone / Grant Progress */}
       <section className="py-24 border-t border-[hsl(var(--border))]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -378,7 +365,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Final CTA */}
       <section className="py-32 text-center relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-t from-[hsl(var(--background))] via-transparent to-[hsl(var(--background))]" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-[hsl(213,94%,55%)] opacity-[0.03] blur-[120px]" />
