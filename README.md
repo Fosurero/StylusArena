@@ -25,7 +25,7 @@ StylusArena is intentionally narrow: it removes setup friction and answers one p
 
 ## Hero Feature: Live Gas Dashboard
 
-![StylusArena Live Gas Dashboard](public/images/readme/live-gas-dashboard.png)
+![StylusArena Live Gas Dashboard](.github/assets/live-gas-dashboard.png)
 
 > "Watch the gas savings update live as you type — 88% on heavy compute in real time"
 
@@ -35,12 +35,12 @@ The dashboard updates from template benchmarks and highlights where Stylus perfo
 
 <table>
 <tr>
-<td width="50%"><img src="public/images/readme/gas-dashboard-live.png" alt="Gas comparison dashboard showing live benchmark deltas across all templates"/><br/><sub>Gas Dashboard — live benchmark deltas across templates</sub></td>
-<td width="50%"><img src="public/images/readme/dual-editor.png" alt="Dual editor showing Stylus Rust and Solidity side-by-side"/><br/><sub>Dual Editor — Rust and Solidity side by side</sub></td>
+<td width="50%"><img src=".github/assets/gas-dashboard-live.png" alt="Gas comparison dashboard showing live benchmark deltas across all templates"/><br/><sub>Gas Dashboard — live benchmark deltas across templates</sub></td>
+<td width="50%"><img src=".github/assets/dual-editor.png" alt="Dual editor showing Stylus Rust and Solidity side-by-side"/><br/><sub>Dual Editor — Rust and Solidity side by side</sub></td>
 </tr>
 <tr>
-<td width="50%"><img src="public/images/readme/template-selector.png" alt="Template selector grouped by developer persona"/><br/><sub>Template Selector — grouped by developer background</sub></td>
-<td width="50%"><img src="public/images/readme/deploy-guidance.png" alt="Deploy guidance panel with Arbitrum Sepolia flow"/><br/><sub>Deploy Guidance — Sepolia deployment path</sub></td>
+<td width="50%"><img src=".github/assets/template-selector.png" alt="Template selector grouped by developer persona"/><br/><sub>Template Selector — grouped by developer background</sub></td>
+<td width="50%"><img src=".github/assets/deploy-guidance.png" alt="Deploy guidance panel with Arbitrum Sepolia flow"/><br/><sub>Deploy Guidance — Sepolia deployment path</sub></td>
 </tr>
 </table>
 
@@ -80,6 +80,23 @@ No paid marketing. Pure organic curiosity.
 ![viem](https://img.shields.io/badge/viem-v2-7C3AED?style=flat-square)
 ![Arbitrum Sepolia](https://img.shields.io/badge/Arbitrum-Sepolia-1F2937?style=flat-square)
 ![Vercel](https://img.shields.io/badge/Deploy-Vercel-black?style=flat-square&logo=vercel)
+
+## Project Structure
+
+```
+├── contracts/            # Stylus template source files
+│   ├── pda-counter/      # Solana-style PDA counter (Rust + Solidity reference)
+│   ├── erc20-token/      # ERC-20 migration example
+│   ├── fibonacci/        # Compute-heavy benchmark
+│   ├── key-value-vault/  # Web2-friendly storage pattern
+│   └── multisig-lite/    # Multi-sig building block
+├── src/
+│   ├── app/              # Next.js App Router pages
+│   ├── components/       # React components (editor, gas dashboard, deploy panel)
+│   └── lib/              # Templates, wagmi config, utilities
+├── docs/                 # Internal setup and contribution docs
+└── .github/assets/       # README screenshots
+```
 
 ## Quick Start
 
