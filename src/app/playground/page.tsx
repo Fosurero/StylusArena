@@ -7,6 +7,7 @@ import { TemplateSelector } from "@/components/template-selector";
 import { DualEditor } from "@/components/code-editor";
 import { GasDashboard } from "@/components/gas-dashboard";
 import { DeployPanel } from "@/components/deploy-panel";
+import { SharePlayground } from "@/components/share-playground";
 import { trackTemplateUsed } from "@/components/community-traction";
 
 function PlaygroundContent() {
@@ -23,10 +24,20 @@ function PlaygroundContent() {
       const found = templates.find((t) => t.id === templateParam);
       if (found) {
         setSelected(found);
-        setCode(found.code);
+        // Restore shared code if present
+        const codeParam = searchParams.get("code");
+        if (codeParam) {
+          try {
+            setCode(decodeURIComponent(atob(codeParam)));
+          } catch {
+            setCode(found.code);
+          }
+        } else {
+          setCode(found.code);
+        }
       }
     }
-  }, [templateParam]);
+  }, [templateParam, searchParams]);
 
   const handleSelectTemplate = (template: ContractTemplate) => {
     setSelected(template);
@@ -46,9 +57,12 @@ function PlaygroundContent() {
             all in your browser
           </p>
         </div>
-        <span className="hidden md:inline text-[10px] text-[hsl(var(--muted-foreground))] border border-[hsl(var(--border))] px-3 py-1.5 rounded-full font-bold uppercase tracking-wider">
-          Lightweight on-ramp · Wizard v2 complement
-        </span>
+        <div className="flex items-center gap-3">
+          <SharePlayground templateId={selected.id} code={code} />
+          <span className="hidden md:inline text-[10px] text-[hsl(var(--muted-foreground))] border border-[hsl(var(--border))] px-3 py-1.5 rounded-full font-bold uppercase tracking-wider">
+            Lightweight on-ramp · Wizard v2 complement
+          </span>
+        </div>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
