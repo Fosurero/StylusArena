@@ -63,19 +63,14 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
               <Link
                 href="/playground"
-                className="group relative px-10 py-5 rounded-2xl text-white font-bold text-lg overflow-hidden
-                         transition-all hover:scale-105 active:scale-100 glow-blue shadow-2xl"
+                className="group px-8 py-4 rounded-xl bg-[hsl(var(--primary))] text-white font-semibold text-base
+                         transition-all hover:bg-[hsl(213,94%,60%)] hover:shadow-lg hover:shadow-[hsl(213,94%,55%)]/20
+                         active:scale-[0.98] flex items-center gap-2"
               >
-                <span className="absolute inset-0 gradient-primary" />
-                <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                  style={{ background: "linear-gradient(135deg, hsl(213, 94%, 60%) 0%, hsl(280, 70%, 60%) 50%, hsl(160, 80%, 47%) 100%)" }}
-                />
-                <span className="relative flex items-center gap-2">
-                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                  Try Now — No Setup Required
-                </span>
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+                Try Now
               </Link>
               <a
                 href="#gas-preview"
