@@ -14,8 +14,9 @@ export function Navbar() {
                 <path d="M13 1.5 L23.5 7.5 L23.5 18.5 L13 24.5 L2.5 18.5 L2.5 7.5 Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"/>
                 <path d="M13 7 L18 10 L18 16 L13 19 L8 16 L8 10 Z" fill="currentColor" opacity="0.18"/>
               </svg>
-              <span className="text-[15px] tracking-tight">
-                <span className="font-mono font-medium text-[hsl(var(--muted-foreground))]">Stylus</span><span className="font-bold text-[hsl(var(--foreground))]">Arena</span>
+              <span className="text-[15px] tracking-tight flex items-baseline gap-[3px]">
+                <span className="font-mono font-medium text-[hsl(var(--muted-foreground))] text-[13px]">Stylus</span>
+                <span className="font-bold text-[hsl(213,80%,68%)]" style={{ fontFamily: 'var(--font-heading)' }}>Arena</span>
               </span>
             </Link>
             <div className="hidden md:flex items-center gap-1">
