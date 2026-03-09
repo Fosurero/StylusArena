@@ -15,7 +15,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "StylusArena — Try Arbitrum Stylus in 30 Seconds",
+  title: "StylusArena Try Arbitrum Stylus in 30 Seconds",
   description:
     "No install. No setup. Deploy Rust contracts and see 60% gas savings vs Solidity in seconds. The quick playground for Solana Rust devs and Web2 engineers.",
   keywords: [
@@ -30,13 +30,13 @@ export const metadata: Metadata = {
     "Ethereum",
   ],
   openGraph: {
-    title: "StylusArena — Try Arbitrum Stylus in 30 Seconds",
+    title: "StylusArena Try Arbitrum Stylus in 30 Seconds",
     description: "No install. No setup. Deploy Rust contracts + see 60% gas savings vs Solidity.",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "StylusArena — Try Arbitrum Stylus in 30 Seconds",
+    title: "StylusArena Try Arbitrum Stylus in 30 Seconds",
     description: "No install. No setup. Deploy Rust contracts + see 60% gas savings vs Solidity.",
   },
 };
