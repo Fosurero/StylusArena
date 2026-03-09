@@ -60,7 +60,7 @@ function PlaygroundContent() {
         <div className="flex items-center gap-3">
           <SharePlayground templateId={selected.id} code={code} />
           <span className="hidden md:inline text-[10px] text-[hsl(var(--muted-foreground))] border border-[hsl(var(--border))] px-3 py-1.5 rounded-full font-bold uppercase tracking-wider">
-            Lightweight on-ramp · Wizard v2 complement
+            Lightweight on-ramp · Docs + CLI companion
           </span>
         </div>
       </div>

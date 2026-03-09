@@ -16,16 +16,16 @@ export function Footer() {
             </div>
             <p className="text-xs text-[hsl(var(--muted-foreground))] leading-relaxed max-w-sm">
               The 30-second on-ramp for external devs to try Arbitrum Stylus.
-              Built as a lightweight on-ramp — complementing{" "}
+              Built as a lightweight on-ramp — alongside the{" "}
               <a
-                href="https://wizard.stylus.com"
+                href="https://docs.arbitrum.io/stylus"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="underline hover:text-[hsl(var(--foreground))] transition-colors"
               >
-                Wizard v2
+                official Stylus docs
               </a>{" "}
-              full IDE.
+              and CLI flow.
             </p>
           </div>
 

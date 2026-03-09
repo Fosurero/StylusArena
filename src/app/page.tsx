@@ -52,7 +52,7 @@ export default function Home() {
             </h1>
 
             <p className="text-lg sm:text-xl text-[hsl(var(--muted-foreground))] max-w-2xl mx-auto mb-12 leading-relaxed">
-              Not a full IDE like Wizard v2. This is the{" "}
+              Not a full local Stylus workflow. This is the{" "}
               <strong className="text-[hsl(var(--foreground))] font-semibold">
                 quick playground
               </strong>{" "}
@@ -87,16 +87,16 @@ export default function Home() {
             </div>
 
             <p className="text-sm text-[hsl(var(--muted-foreground))]">
-              Built as lightweight on-ramp — complementing{" "}
+              Built as lightweight on-ramp — alongside the{" "}
               <a
-                href="https://wizard.stylus.com"
+                href="https://docs.arbitrum.io/stylus"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[hsl(var(--primary))] hover:underline font-medium"
               >
-                Wizard v2
+                official Stylus docs
               </a>{" "}
-              full IDE
+              and CLI flow
             </p>
           </div>
         </div>
@@ -251,7 +251,7 @@ export default function Home() {
             </span>
             <h2 className="text-4xl sm:text-5xl font-black tracking-tight">
               StylusArena vs{" "}
-              <span className="text-[hsl(var(--primary))]">Wizard v2</span>
+              <span className="text-[hsl(var(--primary))]">Full Stylus Workflow</span>
             </h2>
           </div>
           <div className="glass rounded-2xl overflow-hidden border border-[hsl(var(--border))]">
@@ -265,19 +265,19 @@ export default function Home() {
                     <span className="gradient-text">StylusArena</span>
                   </th>
                   <th className="text-center p-5 text-[hsl(var(--primary))] font-bold">
-                    Wizard v2
+                    Docs + CLI
                   </th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-[hsl(var(--border))]">
                 {[
-                  ["Purpose", "Quick try → first deploy", "Full development IDE"],
-                  ["Setup time", "0 seconds", "Minutes (account + config)"],
-                  ["Target user", "Curious external devs", "Committed Stylus devs"],
-                  ["Gas comparison", "Hero feature, visual", "Available"],
-                  ["Templates", "5 curated, audience-tagged", "Extensive library"],
-                  ["Compilation", "Demo flow + CLI guide", "Full in-browser"],
-                  ["Best for", "\"Should I try Stylus?\"", "\"I'm building on Stylus\""],
+                  ["Purpose", "Quick try → first deploy", "Official docs and local deployment flow"],
+                  ["Setup time", "0 seconds", "Minutes (tooling + wallet + config)"],
+                  ["Target user", "Curious external devs", "Developers ready to build"],
+                  ["Gas comparison", "Hero feature, visual", "Manual benchmarking"],
+                  ["Templates", "5 curated, audience-tagged", "Docs examples + your own code"],
+                  ["Compilation", "Demo flow + CLI guide", "Local compile + deploy"],
+                  ["Best for", "\"Should I try Stylus?\"", "\"I'm ready to build with Stylus\""],
                 ].map(([feature, arena, wizard]) => (
                   <tr key={feature} className="hover:bg-[hsl(var(--muted))]/30 transition-colors">
                     <td className="p-5 font-semibold">{feature}</td>
@@ -294,7 +294,7 @@ export default function Home() {
           </div>
           <p className="text-center text-sm text-[hsl(var(--muted-foreground))] mt-8 font-medium">
             StylusArena is the <span className="text-[hsl(var(--foreground))]">front door</span>. 
-            Wizard v2 is the <span className="text-[hsl(var(--foreground))]">workshop</span>. They complement each other.
+            The official Stylus docs and CLI are the <span className="text-[hsl(var(--foreground))]">build path</span> after that.
           </p>
         </div>
       </section>

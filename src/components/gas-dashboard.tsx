@@ -146,7 +146,7 @@ export function GasDashboard({
         contracts (Fibonacci) show the largest savings.
         <br />
         <span className="font-medium text-[hsl(var(--muted-foreground))]/70 italic">
-          Built as lightweight on-ramp — complementing Wizard v2 full IDE
+          Built as lightweight on-ramp — alongside the official Stylus docs and CLI flow
         </span>
       </p>
     </div>
