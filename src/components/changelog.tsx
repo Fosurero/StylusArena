@@ -10,6 +10,13 @@ interface ChangelogEntry {
 const changelog: ChangelogEntry[] = [
   {
     date: "2026-03-09",
+    title: "Share Playground Links",
+    description:
+      "Share your edited code with a single click — generates a URL that restores template and custom code.",
+    tag: "feature",
+  },
+  {
+    date: "2026-03-09",
     title: "Community Traction Dashboard",
     description:
       "Added live usage counters showing playground sessions, templates explored, and wallets connected.",
