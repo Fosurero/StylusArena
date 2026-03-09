@@ -81,12 +81,24 @@ export default function Home() {
               </a>
             </div>
 
+            <p className="text-sm text-[hsl(var(--muted-foreground))]">
+              Built as lightweight on-ramp alongside the{" "}
+              <a
+                href="https://docs.arbitrum.io/stylus"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[hsl(var(--primary))] hover:underline font-medium"
+              >
+                official Stylus docs
+              </a>{" "}
+              and CLI flow
+            </p>
 
           </div>
         </div>
       </section>
 
-      {/* Community Traction */}
+      {/* Community Traction */
       <section className="py-12 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <CommunityTraction />
