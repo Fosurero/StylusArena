@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { templates } from "@/lib/templates";
 import { CommunityTraction } from "@/components/community-traction";
+import { Changelog } from "@/components/changelog";
 
 export default function Home() {
   return (
@@ -295,6 +296,23 @@ export default function Home() {
             StylusArena is the <span className="text-[hsl(var(--foreground))]">front door</span>. 
             Wizard v2 is the <span className="text-[hsl(var(--foreground))]">workshop</span>. They complement each other.
           </p>
+        </div>
+      </section>
+
+      <section className="py-24 border-t border-[hsl(var(--border))]">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-emerald-400 mb-4 block">
+              Development Log
+            </span>
+            <h2 className="text-4xl font-black tracking-tight mb-4">
+              What&apos;s <span className="gradient-text">New</span>
+            </h2>
+            <p className="text-[hsl(var(--muted-foreground))]">
+              Shipping weekly — track our progress as we build
+            </p>
+          </div>
+          <Changelog />
         </div>
       </section>
 
