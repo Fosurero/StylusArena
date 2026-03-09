@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { templates } from "@/lib/templates";
+import { CommunityTraction } from "@/components/community-traction";
 
 export default function Home() {
   return (
@@ -97,6 +98,13 @@ export default function Home() {
               full IDE
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* Community Traction */}
+      <section className="py-12 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <CommunityTraction />
         </div>
       </section>
 

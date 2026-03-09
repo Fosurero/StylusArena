@@ -7,6 +7,7 @@ import { TemplateSelector } from "@/components/template-selector";
 import { DualEditor } from "@/components/code-editor";
 import { GasDashboard } from "@/components/gas-dashboard";
 import { DeployPanel } from "@/components/deploy-panel";
+import { trackTemplateUsed } from "@/components/community-traction";
 
 function PlaygroundContent() {
   const searchParams = useSearchParams();
@@ -30,6 +31,7 @@ function PlaygroundContent() {
   const handleSelectTemplate = (template: ContractTemplate) => {
     setSelected(template);
     setCode(template.code);
+    trackTemplateUsed();
   };
 
   return (

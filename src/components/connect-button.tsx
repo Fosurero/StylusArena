@@ -3,6 +3,7 @@
 import { useAccount, useConnect, useDisconnect, useSwitchChain } from "wagmi";
 import { arbitrumSepolia } from "wagmi/chains";
 import { useState, useEffect, useRef } from "react";
+import { trackWalletConnected } from "@/components/community-traction";
 
 function connectorIcon(name: string) {
   const n = name.toLowerCase();
@@ -202,7 +203,10 @@ export function ConnectButton() {
                   connect(
                     { connector },
                     {
-                      onSuccess: () => setShowWalletPicker(false),
+                      onSuccess: () => {
+                        setShowWalletPicker(false);
+                        trackWalletConnected();
+                      },
                     }
                   );
                 }}
