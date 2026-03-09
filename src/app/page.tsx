@@ -23,13 +23,13 @@ export default function Home() {
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center max-w-5xl mx-auto">
-            <div className="inline-flex items-center gap-2.5 px-5 py-2 rounded-full glass text-sm mb-10 animate-float" style={{ animationDuration: "8s" }}>
+            <div className="inline-flex items-center gap-2.5 px-5 py-2 rounded-full glass text-sm mb-10">
               <span className="relative flex h-2.5 w-2.5">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
                 <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-400" />
               </span>
               <span className="text-[hsl(var(--muted-foreground))] font-medium">
-                The 30-second on-ramp for external devs to try Arbitrum Stylus
+                Arbitrum Sepolia testnet
               </span>
             </div>
 
@@ -251,94 +251,15 @@ export default function Home() {
       <section className="py-24 border-t border-[hsl(var(--border))]">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-emerald-400 mb-4 block">
-              Development Log
-            </span>
             <h2 className="text-4xl font-black tracking-tight mb-4">
               What&apos;s <span className="gradient-text">New</span>
             </h2>
-            <p className="text-[hsl(var(--muted-foreground))]">
-              Shipping weekly — track our progress as we build
-            </p>
           </div>
           <Changelog />
         </div>
       </section>
 
-      <section className="py-24 border-t border-[hsl(var(--border))]">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-emerald-400 mb-4 block">
-              Grant Progress
-            </span>
-            <h2 className="text-4xl font-black tracking-tight mb-4">
-              Building in the Open
-            </h2>
-            <p className="text-[hsl(var(--muted-foreground))]">
-              Track our progress through the Arbitrum Stylus grant milestones
-            </p>
-          </div>
-          <div className="space-y-4">
-            {[
-              {
-                milestone: "Milestone 1",
-                title: "MVP Launch — Playground + Gas Dashboard",
-                amount: "$3,700",
-                status: "current",
-                items: ["Landing page with Try Now CTA", "Monaco editor with 5 templates", "Gas comparison dashboard", "Wallet connect + Sepolia deploy flow"],
-              },
-              {
-                milestone: "Milestone 2",
-                title: "Full Compilation + Enhanced Deploy",
-                amount: "$3,700",
-                status: "upcoming",
-                items: ["In-browser Rust → WASM compilation", "Real contract deployment to Sepolia", "Transaction history & verification", "Shareable playground links"],
-              },
-              {
-                milestone: "Milestone 3",
-                title: "Community + Analytics",
-                amount: "$3,600",
-                status: "upcoming",
-                items: ["User analytics dashboard", "Community template submissions", "Gas benchmarking suite", "Documentation & tutorials"],
-              },
-            ].map((m) => (
-              <div
-                key={m.milestone}
-                className={`glass rounded-xl p-6 border transition-all ${
-                  m.status === "current"
-                    ? "border-emerald-500/40 glow-green"
-                    : "border-[hsl(var(--border))] opacity-60"
-                }`}
-              >
-                <div className="flex items-start justify-between gap-4 mb-3">
-                  <div className="flex items-center gap-3">
-                    <span className={`text-xs px-2.5 py-1 rounded-full font-bold uppercase tracking-wider ${
-                      m.status === "current"
-                        ? "bg-emerald-500/20 text-emerald-400 border border-emerald-500/30"
-                        : "bg-[hsl(var(--muted))] text-[hsl(var(--muted-foreground))] border border-[hsl(var(--border))]"
-                    }`}>
-                      {m.status === "current" ? "In Progress" : "Upcoming"}
-                    </span>
-                    <span className="text-xs text-[hsl(var(--muted-foreground))] font-mono">{m.milestone}</span>
-                  </div>
-                  <span className="text-sm font-bold font-mono gradient-text">{m.amount}</span>
-                </div>
-                <h3 className="text-lg font-bold mb-2">{m.title}</h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5">
-                  {m.items.map((item) => (
-                    <div key={item} className="flex items-center gap-2 text-xs text-[hsl(var(--muted-foreground))]">
-                      <span className={`w-1.5 h-1.5 rounded-full flex-shrink-0 ${
-                        m.status === "current" ? "bg-emerald-400" : "bg-[hsl(var(--muted-foreground))]"
-                      }`} />
-                      {item}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+
 
       <section className="py-32 text-center relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-t from-[hsl(var(--background))] via-transparent to-[hsl(var(--background))]" />
@@ -355,11 +276,13 @@ export default function Home() {
           <Link
             href="/playground"
             className="group relative inline-flex px-12 py-6 rounded-2xl text-white font-bold text-xl overflow-hidden
-                     transition-all hover:scale-105 active:scale-100 glow-blue shadow-2xl"
+                     transition-all hover:scale-105 active:scale-100 shadow-lg"
           >
-            <span className="absolute inset-0 gradient-primary" />
+            <span className="absolute inset-0"
+              style={{ background: "linear-gradient(135deg, hsl(213,70%,50%) 0%, hsl(250,55%,55%) 100%)" }}
+            />
             <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity"
-              style={{ background: "linear-gradient(135deg, hsl(213, 94%, 60%) 0%, hsl(280, 70%, 60%) 50%, hsl(160, 80%, 47%) 100%)" }}
+              style={{ background: "linear-gradient(135deg, hsl(213,70%,55%) 0%, hsl(250,55%,60%) 100%)" }}
             />
             <span className="relative flex items-center gap-3">
               <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
