@@ -15,17 +15,7 @@ export function Footer() {
               </span>
             </div>
             <p className="text-xs text-[hsl(var(--muted-foreground))] leading-relaxed max-w-sm">
-              The 30-second on-ramp for external devs to try Arbitrum Stylus.
-              Built as a lightweight on-ramp — alongside the{" "}
-              <a
-                href="https://docs.arbitrum.io/stylus"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline hover:text-[hsl(var(--foreground))] transition-colors"
-              >
-                official Stylus docs
-              </a>{" "}
-              and CLI flow.
+              A browser playground for Arbitrum Stylus — pick a template, edit Rust, deploy to Sepolia, and see the gas difference yourself.
             </p>
           </div>
 

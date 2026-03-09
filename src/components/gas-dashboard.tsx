@@ -142,12 +142,7 @@ export function GasDashboard({
       </div>
 
       <p className="text-xs text-center text-[hsl(var(--muted-foreground))] leading-relaxed">
-        Gas estimates based on Arbitrum Sepolia benchmarks. Compute-heavy
-        contracts (Fibonacci) show the largest savings.
-        <br />
-        <span className="font-medium text-[hsl(var(--muted-foreground))]/70 italic">
-          Built as lightweight on-ramp — alongside the official Stylus docs and CLI flow
-        </span>
+        Gas estimates based on Arbitrum Sepolia benchmarks. Compute-heavy contracts (Fibonacci) show the largest savings.
       </p>
     </div>
   );

@@ -86,18 +86,7 @@ export default function Home() {
               </a>
             </div>
 
-            <p className="text-sm text-[hsl(var(--muted-foreground))]">
-              Built as lightweight on-ramp — alongside the{" "}
-              <a
-                href="https://docs.arbitrum.io/stylus"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[hsl(var(--primary))] hover:underline font-medium"
-              >
-                official Stylus docs
-              </a>{" "}
-              and CLI flow
-            </p>
+
           </div>
         </div>
       </section>
@@ -243,61 +232,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-24 border-t border-[hsl(var(--border))]">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-[hsl(var(--primary))] mb-4 block">
-              Positioning
-            </span>
-            <h2 className="text-4xl sm:text-5xl font-black tracking-tight">
-              StylusArena vs{" "}
-              <span className="text-[hsl(var(--primary))]">Full Stylus Workflow</span>
-            </h2>
-          </div>
-          <div className="glass rounded-2xl overflow-hidden border border-[hsl(var(--border))]">
-            <table className="w-full text-sm">
-              <thead>
-                <tr className="border-b border-[hsl(var(--border))] bg-[hsl(var(--muted))]/50">
-                  <th className="text-left p-5 text-[hsl(var(--muted-foreground))] font-semibold uppercase text-xs tracking-wider">
-                    Feature
-                  </th>
-                  <th className="text-center p-5 font-bold">
-                    <span className="gradient-text">StylusArena</span>
-                  </th>
-                  <th className="text-center p-5 text-[hsl(var(--primary))] font-bold">
-                    Docs + CLI
-                  </th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-[hsl(var(--border))]">
-                {[
-                  ["Purpose", "Quick try → first deploy", "Official docs and local deployment flow"],
-                  ["Setup time", "0 seconds", "Minutes (tooling + wallet + config)"],
-                  ["Target user", "Curious external devs", "Developers ready to build"],
-                  ["Gas comparison", "Hero feature, visual", "Manual benchmarking"],
-                  ["Templates", "5 curated, audience-tagged", "Docs examples + your own code"],
-                  ["Compilation", "Demo flow + CLI guide", "Local compile + deploy"],
-                  ["Best for", "\"Should I try Stylus?\"", "\"I'm ready to build with Stylus\""],
-                ].map(([feature, arena, wizard]) => (
-                  <tr key={feature} className="hover:bg-[hsl(var(--muted))]/30 transition-colors">
-                    <td className="p-5 font-semibold">{feature}</td>
-                    <td className="p-5 text-center text-[hsl(var(--muted-foreground))]">
-                      {arena}
-                    </td>
-                    <td className="p-5 text-center text-[hsl(var(--muted-foreground))]">
-                      {wizard}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-          <p className="text-center text-sm text-[hsl(var(--muted-foreground))] mt-8 font-medium">
-            StylusArena is the <span className="text-[hsl(var(--foreground))]">front door</span>. 
-            The official Stylus docs and CLI are the <span className="text-[hsl(var(--foreground))]">build path</span> after that.
-          </p>
-        </div>
-      </section>
+
 
       <section className="py-24 border-t border-[hsl(var(--border))]">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">

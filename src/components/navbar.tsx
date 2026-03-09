@@ -44,9 +44,6 @@ export function Navbar() {
             </div>
           </div>
           <div className="flex items-center gap-3">
-            <span className="hidden xl:inline text-[10px] text-[hsl(var(--muted-foreground))] border border-[hsl(var(--border))] px-2.5 py-1 rounded-full uppercase tracking-wider font-medium">
-              Lightweight on-ramp &bull; Docs + CLI companion
-            </span>
             <ConnectButton />
           </div>
         </div>
