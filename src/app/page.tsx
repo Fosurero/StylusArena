@@ -105,7 +105,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Community Traction */
+      {/* Community Traction */}
       <section className="py-12 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <CommunityTraction />
