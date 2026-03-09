@@ -10,11 +10,12 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-8">
             <Link href="/" className="flex items-center gap-2.5 group">
-              <div className="w-9 h-9 rounded-xl gradient-primary flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform">
-                <span className="text-white font-black text-sm tracking-tight">SA</span>
-              </div>
-              <span className="text-lg font-bold tracking-tight">
-                Stylus<span className="gradient-text">Arena</span>
+              <svg width="26" height="26" viewBox="0 0 26 26" fill="none" className="text-[hsl(213,94%,55%)] group-hover:text-[hsl(213,94%,65%)] transition-colors" aria-hidden="true">
+                <path d="M13 1.5 L23.5 7.5 L23.5 18.5 L13 24.5 L2.5 18.5 L2.5 7.5 Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"/>
+                <path d="M13 7 L18 10 L18 16 L13 19 L8 16 L8 10 Z" fill="currentColor" opacity="0.18"/>
+              </svg>
+              <span className="text-[15px] tracking-tight">
+                <span className="font-mono font-medium text-[hsl(var(--muted-foreground))]">Stylus</span><span className="font-bold text-[hsl(var(--foreground))]">Arena</span>
               </span>
             </Link>
             <div className="hidden md:flex items-center gap-1">

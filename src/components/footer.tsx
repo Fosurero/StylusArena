@@ -7,11 +7,12 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
             <div className="flex items-center gap-2 mb-3">
-              <div className="w-7 h-7 rounded-lg gradient-primary flex items-center justify-center">
-                <span className="text-white font-bold text-xs">SA</span>
-              </div>
-              <span className="text-sm font-bold tracking-tight">
-                Stylus<span className="gradient-text">Arena</span>
+              <svg width="20" height="20" viewBox="0 0 26 26" fill="none" className="text-[hsl(213,94%,55%)]" aria-hidden="true">
+                <path d="M13 1.5 L23.5 7.5 L23.5 18.5 L13 24.5 L2.5 18.5 L2.5 7.5 Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round"/>
+                <path d="M13 7 L18 10 L18 16 L13 19 L8 16 L8 10 Z" fill="currentColor" opacity="0.18"/>
+              </svg>
+              <span className="text-sm tracking-tight">
+                <span className="font-mono font-medium text-[hsl(var(--muted-foreground))]">Stylus</span><span className="font-bold text-[hsl(var(--foreground))]">Arena</span>
               </span>
             </div>
             <p className="text-xs text-[hsl(var(--muted-foreground))] leading-relaxed max-w-sm">
