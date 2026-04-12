@@ -1,7 +1,7 @@
 # StylusArena
 > A fast, no-install playground for learning and testing Arbitrum Stylus from your browser.
 
-[![Live Demo](https://img.shields.io/badge/Live_Demo-🎮_Try_Now-brightgreen?style=for-the-badge&logo=vercel&logoColor=white)](https://stylusarena.vercel.app)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-🎮_Try_Now-brightgreen?style=for-the-badge&logo=vercel&logoColor=white)](https://stylus.click)
 [![Open in GitHub Codespaces](https://img.shields.io/badge/Open_in_Codespaces-000000?style=for-the-badge&logo=github)](https://github.com/codespaces/new?repo=Fosurero/StylusArena)
 
 StylusArena helps developers go from “I’m curious about Stylus” to a working contract interaction in seconds, with live gas comparisons against Solidity.
