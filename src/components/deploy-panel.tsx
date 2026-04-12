@@ -186,8 +186,13 @@ export function DeployPanel({ contractCode, templateId }: DeployPanelProps) {
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
             <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400" />
           </span>
-          Deploy to Arbitrum Sepolia
+          Deployment Guide (Arbitrum Sepolia)
         </h3>
+
+        <p className="text-xs text-[hsl(var(--muted-foreground))] mb-3 leading-relaxed">
+          This panel prepares deployment steps and contract interaction. Actual
+          contract deployment is done with <span className="font-mono">cargo stylus deploy</span>.
+        </p>
 
         {!isConnected ? (
           <div className="text-center py-6">
@@ -230,7 +235,7 @@ export function DeployPanel({ contractCode, templateId }: DeployPanelProps) {
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
                   </svg>
-                  Deploy Contract
+                  Show Deploy Steps
                 </span>
               )}
             </button>

@@ -53,8 +53,8 @@ function PlaygroundContent() {
             Stylus <span className="gradient-text">Playground</span>
           </h1>
           <p className="text-sm text-[hsl(var(--muted-foreground))] mt-1">
-            Edit Rust contracts, compare gas, deploy to Arbitrum Sepolia —
-            all in your browser
+            Edit Rust contracts, compare gas, and get production-ready deploy
+            steps for Arbitrum Sepolia
           </p>
         </div>
         <div className="flex items-center gap-3">
@@ -87,7 +87,7 @@ function PlaygroundContent() {
         <div className="flex items-center gap-3 mb-6">
           <div className="h-px flex-1 bg-gradient-to-r from-transparent via-[hsl(var(--border))] to-transparent" />
           <h2 className="text-xl font-black tracking-tight whitespace-nowrap">
-            ⛽ Gas Comparison{" "}
+            Gas Comparison{" "}
             <span className="gradient-text">Dashboard</span>
           </h2>
           <div className="h-px flex-1 bg-gradient-to-r from-transparent via-[hsl(var(--border))] to-transparent" />

@@ -87,27 +87,27 @@ export function CommunityTraction() {
       {
         label: "Playground Sessions",
         value: baseSessions + data.sessions,
-        icon: "🚀",
+        icon: "PS",
         color: "text-[hsl(var(--primary))]",
       },
       {
         label: "Templates Explored",
         value: baseTemplates + data.templates,
-        icon: "📝",
+        icon: "TE",
         color: "text-emerald-400",
       },
       {
         label: "Solana-Background Devs Reached",
         value: baseSolanaDevs + Math.floor(data.sessions / 3),
         suffix: "+",
-        icon: "🌉",
+        icon: "SD",
         color: "text-[hsl(var(--accent))]",
       },
       {
         label: "Avg. Gas Saved",
         value: 60,
         suffix: "%",
-        icon: "⛽",
+        icon: "GS",
         color: "text-emerald-400",
       },
     ]);
@@ -132,7 +132,9 @@ export function CommunityTraction() {
             key={stat.label}
             className="px-6 py-6 text-center hover:bg-[hsl(var(--muted))]/30 transition-colors"
           >
-            <span className="text-2xl mb-2 block">{stat.icon}</span>
+            <span className="text-[10px] mb-2 inline-flex px-2 py-1 rounded-md border border-[hsl(var(--border))] text-[hsl(var(--muted-foreground))] font-bold tracking-widest">
+              {stat.icon}
+            </span>
             <p className={`text-3xl sm:text-4xl font-black tracking-tight ${stat.color} mb-1`}>
               <AnimatedCounter target={stat.value} />
               {stat.suffix && <span className="text-xl">{stat.suffix}</span>}

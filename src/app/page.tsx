@@ -33,7 +33,7 @@ export default function Home() {
               </span>
             </div>
 
-            <h1 className="text-5xl sm:text-6xl lg:text-8xl font-black tracking-tighter leading-[0.9] mb-8">
+            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-black tracking-tighter leading-[0.95] mb-8">
               No install. No setup.
               <br />
               <span className="gradient-text">
