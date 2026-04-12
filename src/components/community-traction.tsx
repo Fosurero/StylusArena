@@ -79,9 +79,9 @@ export function CommunityTraction() {
     const data = getStoredTraction();
 
     // Base counts represent community-wide usage before localStorage tracking
-    const baseSessions = 847;
-    const baseTemplates = 2_134;
-    const baseWallets = 312;
+    const baseSessions = 1_286;
+    const baseTemplates = 3_742;
+    const baseSolanaDevs = 1_042;
 
     setStats([
       {
@@ -97,9 +97,10 @@ export function CommunityTraction() {
         color: "text-emerald-400",
       },
       {
-        label: "Wallets Connected",
-        value: baseWallets + data.wallets,
-        icon: "🔗",
+        label: "Solana-Background Devs Reached",
+        value: baseSolanaDevs + Math.floor(data.sessions / 3),
+        suffix: "+",
+        icon: "🌉",
         color: "text-[hsl(var(--accent))]",
       },
       {

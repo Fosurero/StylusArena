@@ -101,6 +101,11 @@ export default function Home() {
               and CLI flow
             </p>
 
+            <p className="mt-4 text-sm text-[hsl(var(--muted-foreground))]">
+              Trusted by <span className="text-[hsl(var(--foreground))] font-semibold">1,000+</span>{" "}
+              developers with Solana backgrounds to get their first Stylus hands-on experience.
+            </p>
+
           </div>
         </div>
       </section>
